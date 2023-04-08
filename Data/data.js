@@ -1,0 +1,60 @@
+const busData={
+{
+    bus_ac7:{
+    busNum:"ac7"
+    locations:["chomu_pulia","dantli_phatak","railway_station","gpo","ajmeri_gate","gandhi_nagar_mode","rambagh","jhalana","jagatpura"],
+    frequency:"22_min",
+}
+}
+{
+    bus_01:{
+        busNum:"01"
+        locations:["bheru_khejda","galta","vai_harmuda","chomu_pulia","pittal_factory","chandpoul","choti_chopar"],
+        frequency:"23_min",
+    }
+}
+{
+    bus_26:{
+        busNum:"26"
+        locations:["chandpoul","bagru","sodala","purani_chungi","dcm","heerapura","bhankrota","bad_ke_balaji","dahmi_kala","sanjhariya"],
+        frequency:"23_min",
+    }
+}
+{
+    bus_ac1{
+        busNum:"ac1"
+        locations:["sanganer","kukas","sanganer_police_station","tonk_phatak","rambagh","ajmeri_gate","sanganeri_gate","badi_chopar","ramgarh_mode","jal_mahal","amber_fort"],
+        frequency:"24_min",
+
+    }
+}
+{
+    bus_ac8{
+        busNum:"ac8"
+        locations:["choti_chopad","mundiya_ramsar","chandpoul","railway_station","hasanpura","khatipura","bindayaka",],
+        frequency:"28_min",
+
+    }
+}
+{
+    bus_1A{
+        busNum:"1A"
+        locations:["vki","transport_nagar","chomu_pulia","amba_badi","pani_pej","pittal_factory","chandpoul","ajmeri_gate"],
+        frequency:"28_min",
+    }
+}
+{
+    bus_15{
+        busNum:"15"
+        locations:["chandpoul","chomu","chomu_pulia","khaitan","road_no_14","rampura","jetpura"],
+        frequency:"30_min",
+    }
+}
+{
+    bus_24{
+        busNum:"24"
+        locations:["chandpoul","kalwad","pani_pech","chomupulia","jhotwada","hathoes"],
+        frequency:"30_min",
+    }
+}
+}
