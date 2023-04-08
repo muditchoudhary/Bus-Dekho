@@ -1,20 +1,20 @@
 import * as React from "react";
 import {View, Text, StyleSheet, Image } from "react-native";
 import cardImg from "../assets/card-demo-img.png";
-function BusCard() {
+function BusCard(props) {
   return (
     <View style={styles.busContainer}>
       <View style={styles.busNumContainer}>
-        <Text>6A</Text>
+        <Text>{props.busNumber}</Text>
       </View>
       <View style={styles.imageContainer}>
         <Image
           style={{
             width: "100%",
             height: "100%",
-            resizeMode: "contain",
+            resizeMode: "cover",
           }}
-          source={cardImg}
+          source={props.busImg}
         />
       </View>
     </View>
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 5,
+    height: 100,
   },
 });
 
