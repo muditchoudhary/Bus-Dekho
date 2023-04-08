@@ -3,7 +3,7 @@ import * as React from "react";
 import { Button, View, Text, StyleSheet, TextInput } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import  {useState} from 'react';
+import { useState } from "react";
 
 function DetailsScreen() {
   return (
@@ -14,24 +14,34 @@ function DetailsScreen() {
 }
 
 function HomeScreen({ navigation }) {
-    const [currentLocation, setcurrentLocation] = useState("");
-    const [destinationLocation, setdestinationLocation] = useState("");
+  const [currentLocation, setcurrentLocation] = useState("");
+  const [destinationLocation, setdestinationLocation] = useState("");
 
   return (
     <View style={styles.mainContainer}>
       <View styeles={styles.inputContainer}>
-      <TextInput
-        style={styles.input}
-        onChangeText={(text) => {
-            setcurrentLocation(text)
-        }}
-        value={currentLocation} />
         <TextInput
-        style={styles.input}
-        onChangeText={(text) => {
-            setdestinationLocation(text)
-        }}
-        value={destinationLocation} />
+          style={styles.input}
+          onChangeText={(text) => {
+            setcurrentLocation(text);
+          }}
+          value={currentLocation}
+          placeholder="Current Location"
+        />
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => {
+            setdestinationLocation(text);
+          }}
+          value={destinationLocation}
+          placeholder="Destination Location"
+        />
+        <Button
+          onPress={() => alert("hello")}
+          title="Search Bus"
+          color="#841584"
+          style={styles.searchBtn}
+        />
       </View>
     </View>
   );
@@ -70,7 +80,11 @@ const styles = StyleSheet.create({
   input: {
     width: "100%",
     borderWidth: 2,
-    borderColor: "blue"
+    borderColor: "blue",
+  },
+  searchBtn: {
+    width: "50%",
   }
 });
+
 export default App;
