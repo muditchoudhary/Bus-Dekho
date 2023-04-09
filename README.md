@@ -8,6 +8,17 @@ Bus Dekho is an application built for japurites and people who are new to Jaipur
 
 Whenever we go to college by bus, we saw many people get on the bus and later after covering some distance realize that was the wrong bus and had to leave the bus and find the correct bus. This waste some of their and also the passengers on the bus. The problem people are facing is that they don't know which bus is going to their destination, before onboarding on the bus. So, this's the one reason we want to make an app around it. Another reason is that some bus conductors cheat passengers by not giving them proper ticker and get the money from them by giving some discount and don't provide the ticket. This leads to corruption. This is another reason we want 
 
+# Demo
+![WhatsApp Image 2023-04-09 at 12 35 08 PM (1)](https://user-images.githubusercontent.com/74391865/230760294-296baebd-2295-464f-b184-f61b50b5adb8.jpeg)
+
+![WhatsApp Image 2023-04-09 at 12 35 08 PM](https://user-images.githubusercontent.com/74391865/230760300-3113ba17-a4f0-49c3-83f8-17d13665c99d.jpeg)
+
+![WhatsApp Image 2023-04-09 at 12 35 09 PM](https://user-images.githubusercontent.com/74391865/230760303-265aa2f9-a700-4629-8fc4-5b61bb259575.jpeg)
+
+
+
+
+
 # What were the problems and how we are solving them?
 
 ## 1. Helping people by showing the buses to their destination 
