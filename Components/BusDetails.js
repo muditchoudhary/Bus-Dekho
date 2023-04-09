@@ -18,15 +18,28 @@ function BusDetails(props) {
 
     return myText;
   }
+
+  function formatFreq(freq) {
+    return freq.replace(/_/g, " ");
+  }
   return (
     <ScrollView style={styles.scrollViewContainer}>
       <View style={styles.mainContainer}>
-        <Text style={{ fontSize: 26, fontWeight: "bold" }}>Via Locations</Text>
+        <Text style={{ fontSize: 26, fontWeight: "bold", marginVertical: 10 }}>
+          Via Locations
+        </Text>
         <View style={styles.locationsSubContainer}>
           {props.busLocations.map((location) => {
             return (
               <Text
-                style={{ borderWidth: 1, borderColor: "pink", fontSize: 16 }}
+                style={{
+                  borderWidth: 1,
+                  borderColor: "black",
+                  backgroundColor: "pink",
+                  fontSize: 16,
+                  paddingHorizontal: 10,
+                  padding: 2,
+                }}
               >
                 {formatText(location)}
               </Text>
@@ -35,14 +48,20 @@ function BusDetails(props) {
         </View>
       </View>
       <View style={styles.mainContainer}>
-        <Text style={{ fontSize: 26, fontWeight: "bold" }}>Frequency</Text>
+        <Text style={{ fontSize: 26, fontWeight: "bold", marginVertical: 10 }}>
+          Frequency
+        </Text>
         <View style={styles.locationsSubContainer}>
-          <Text>{props.busFreq}</Text>
+          <Text style={{ fontWeight: "bold", fontSize: 16 }}>
+            Every {formatFreq(props.busFreq)}
+          </Text>
         </View>
       </View>
-      <View style={styles.imageContainer}>
-        <Text style={{ fontSize: 26, fontWeight: "bold" }}>Fair</Text>
-        <View style={styles.fairContainer}>
+      <View style={styles.fairContainer}>
+        <Text style={{ fontSize: 26, fontWeight: "bold", marginVertical: 10 }}>
+          Fair
+        </Text>
+        <View style={styles.imageContainer}>
           <Image
             source={fairImg}
             style={{
@@ -60,26 +79,26 @@ function BusDetails(props) {
 const styles = StyleSheet.create({
   scrollViewContainer: {
     flex: 1,
-    borderWidth: 2,
-    borderColor: "red",
+    margin: 10,
   },
-  mainContainer: {
-    borderWidth: 2,
-    borderColor: "green",
-  },
+  mainContainer: {},
   locationsSubContainer: {
-    borderWidth: 2,
-    borderColor: "blue",
     display: "flex",
     flexDirection: "row",
     gap: 5,
     flexWrap: "wrap",
-  },
-  imageContainer: {
-    flex: 1,
+    borderWidth: 2,
+    borderColor: "black",
+    padding: 10,
   },
   fairContainer: {
     flex: 1,
+  },
+  imageContainer: {
+    flex: 1,
+    borderWidth: 2,
+    borderColor: "black",
+    height: 550,
   },
 });
 export default BusDetails;

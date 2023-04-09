@@ -29,11 +29,7 @@ function HomeScreen({ navigation }) {
   const [fetchedBused, setFetchedBused] = useState([]);
   const [doesFetched, setDoesFetched] = useState(false);
 
-  const doesBothLocationPresent = (
-    cl,
-    dl,
-    locations
-  ) => {
+  const doesBothLocationPresent = (cl, dl, locations) => {
     let isCurrentLocationPresent = locations.includes(cl);
     let isDestinationLocationPresent = locations.includes(dl);
 
@@ -60,13 +56,7 @@ function HomeScreen({ navigation }) {
       for (let i = 0; i < jaipurBusesLen; i++) {
         const currentBusKey = jaipurBusesObjKeys[i];
         const locations = busData[currentBusKey].location;
-        if (
-          doesBothLocationPresent(
-            cl,
-            dl,
-            locations
-          )
-        ) {
+        if (doesBothLocationPresent(cl, dl, locations)) {
           resultBuses.push(busData[currentBusKey]);
         }
       }
@@ -106,12 +96,18 @@ function HomeScreen({ navigation }) {
               });
           }}
           title="Search Bus"
-          color="#841584"
-          style={styles.searchBtn}
+          color="pink"
         />
       </View>
       {doesFetched ? (
-        <ScrollView>
+        <ScrollView
+          style={{
+            flex: 2,
+            borderWidth: 2,
+            borderColor: "black",
+            marginTop: 5,
+          }}
+        >
           {fetchedBused.map((busObj) => {
             const currentBus = busObj;
             return (
@@ -124,6 +120,7 @@ function HomeScreen({ navigation }) {
                 }}
                 underlayColor="white"
                 key={currentBus.uniqueKey}
+                style={{ margin: 10 }}
               >
                 <BusCard
                   busNumber={currentBus.busNum}
@@ -135,7 +132,13 @@ function HomeScreen({ navigation }) {
           })}
         </ScrollView>
       ) : (
-        <Text>Please enter the locations.</Text>
+        <View
+          style={{ flex: 2, justifyContent: "center", alignItems: "center" }}
+        >
+          <Text style={{ fontSize: 22, fontWeight: "bold" }}>
+            Please enter the locations.
+          </Text>
+        </View>
       )}
     </View>
   );
@@ -165,23 +168,31 @@ function App() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    borderWidth: 2,
-    borderColor: "red",
+    margin: 10,
+    display: "flex",
   },
   inputContainer: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    borderWidth: 2,
-    borderColor: "green",
+    columnGap: 15,
+    flex: 1,
   },
   input: {
     width: "100%",
     borderWidth: 2,
-    borderColor: "blue",
+    borderColor: "black",
+    marginVertical: 5,
+    padding: 10,
+    fontSize: 18,
+    borderRadius: 16,
   },
   searchBtn: {
     width: "50%",
+    backgroundColor: "pink",
+    borderWidth: 2,
+    borderColor: "black",
+    color: "black",
   },
 });
 
